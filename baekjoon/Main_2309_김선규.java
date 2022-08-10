@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main_2309_일곱난쟁이 {
+public class Main_2309_김선규 {
 
 	static int N = 9;
 	static int R = 7;
@@ -29,7 +29,8 @@ public class Main_2309_일곱난쟁이 {
 			
 			if(sum==100) {
 				Arrays.sort(ans);
-				System.out.println(Arrays.toString(ans));
+				for(int i : ans)
+					System.out.println(i);
 				System.exit(0);
 			}
 			return;
