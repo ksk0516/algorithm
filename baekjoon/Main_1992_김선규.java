@@ -35,7 +35,7 @@ public class Main_1992_김선규 {
 
 		int num = check(x, y, n, cnt); // 쪼개야하는지 확인하는 함수.
 
-		if (num != 2) {
+		if (num != 2) { // 배열엔 1 또는 0 뿐이므로 2가 나오면 변을 나눠주러 내려감
 			sb.append(num);
 			return;
 		}
@@ -44,10 +44,10 @@ public class Main_1992_김선규 {
 			return;
 
 		else {
-			cnt /= 4;
+			cnt /= 4; // 배열의 총 개수는 1/4로 줍니다.
 			if (cnt == 0)
 				cnt = 1;
-			n /= 2;
+			n /= 2; // 배열 한 변의 크기는 1/2로 줍니다.
 			sb.append('(');
 			quad(x, y, n, cnt);
 			quad(x, y + n, n, cnt);
@@ -58,7 +58,7 @@ public class Main_1992_김선규 {
 		}
 	}
 
-	public static int check(int x, int y, int n, int cnt) {
+	public static int check(int x, int y, int n, int cnt) { // 1뿐이면 1출력, 0뿐이면 0출력, 섞여있다면 2가 출력됩니다.
 		int oneCnt = 0;
 		int zeroCnt = 0;
 		for (int i = x; i < x + n; i++) {
